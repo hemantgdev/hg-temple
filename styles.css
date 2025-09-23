@@ -419,3 +419,15 @@ body {
         margin: 0;
     }
 }
+
+/* Google Trends responsive container */
+.trends-container {
+    width: 100%;
+    min-height: 420px; /* ensure embed has space to render on mobile */
+}
+
+@media (max-width: 480px) {
+    .trends-container {
+        min-height: 360px;
+    }
+}
