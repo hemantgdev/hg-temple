@@ -66,58 +66,20 @@
             </ul>
 
             <details>
-                <summary><u><span style="margin-left: 4px;">Pricing booms in holiday months stay similar amongst competitors</span></u></summary>
+                <summary><u><span style="margin-left: 4px;">Pricing booms in holiday months stay similar amongst competitors</span></u><span class="note-text" style="margin-left: 8px;">(click to open)</span></summary>
                 <div style="margin-left: 12px; margin-top: 8px;">
-                    <div id="trends-timeseries" class="trends-container"></div>
-                    <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4215_RC01/embed_loader.js"></script>
-                    <script type="text/javascript">
-                    (function(){
-                      const container = document.getElementById('trends-timeseries');
-                      function renderTrends(){
-                        if (!container || container.dataset.rendered === '1' || !window.trends || !trends.embed) return;
-                        try {
-                          if (trends.embed.renderExploreWidgetTo) {
-                            trends.embed.renderExploreWidgetTo(container, "TIMESERIES",
-                              {"comparisonItem":[
-                                {"keyword":"/g/11shcz8pcd","geo":"","time":"2024-10-01 2025-01-01"},
-                                {"keyword":"/g/11dxd5m8sm","geo":"","time":"2024-10-01 2025-01-01"},
-                                {"keyword":"/g/11jrs8n__7","geo":"","time":"2024-10-01 2025-01-01"}
-                              ],"category":0,"property":""},
-                              {"exploreQuery":"date=2024-10-01%202025-01-01&q=%2Fg%2F11shcz8pcd,%2Fg%2F11dxd5m8sm,%2Fg%2F11jrs8n__7&hl=en","guestPath":"https://trends.google.com:443/trends/embed/"}
-                            );
-                          } else {
-                            // Fallback
-                            trends.embed.renderExploreWidget("TIMESERIES",
-                              {"comparisonItem":[
-                                {"keyword":"/g/11shcz8pcd","geo":"","time":"2024-10-01 2025-01-01"},
-                                {"keyword":"/g/11dxd5m8sm","geo":"","time":"2024-10-01 2025-01-01"},
-                                {"keyword":"/g/11jrs8n__7","geo":"","time":"2024-10-01 2025-01-01"}
-                              ],"category":0,"property":""},
-                              {"exploreQuery":"date=2024-10-01%202025-01-01&q=%2Fg%2F11shcz8pcd,%2Fg%2F11dxd5m8sm,%2Fg%2F11jrs8n__7&hl=en","guestPath":"https://trends.google.com:443/trends/embed/"}
-                            );
-                          }
-                          container.dataset.rendered = '1';
-                        } catch (e) { /* ignore */ }
-                      }
-
-                      // If details is open on load or viewport is desktop, render immediately
-                      const detailsEl = (function(){
-                        // currentScript is inside the details content
-                        const s = document.currentScript;
-                        return s ? s.closest('details') : null;
-                      })();
-                      if (!detailsEl || detailsEl.open || window.matchMedia('(min-width: 769px)').matches) {
-                        renderTrends();
-                      }
-
-                      // Render when the details is opened (good for mobile sizing)
-                      if (detailsEl) {
-                        detailsEl.addEventListener('toggle', function(){
-                          if (detailsEl.open) renderTrends();
-                        });
-                      }
-                    })();
-                    </script>
+                    <div class="trends-container only-desktop">
+                        <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4215_RC01/embed_loader.js"></script>
+                        <script type="text/javascript">
+                        trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/g/11shcz8pcd","geo":"","time":"2024-10-01 2025-01-01"},{"keyword":"/g/11dxd5m8sm","geo":"","time":"2024-10-01 2025-01-01"},{"keyword":"/g/11jrs8n__7","geo":"","time":"2024-10-01 2025-01-01"}],"category":0,"property":""}, {"exploreQuery":"date=2024-10-01%202025-01-01&q=%2Fg%2F11shcz8pcd,%2Fg%2F11dxd5m8sm,%2Fg%2F11jrs8n__7&hl=en","guestPath":"https://trends.google.com:443/trends/embed/"});
+                        </script>
+                    </div>
+                    <div class="trends-container only-mobile">
+                        <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4215_RC01/embed_loader.js"></script>
+                        <script type="text/javascript">
+                        trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/g/11shcz8pcd","geo":"","time":"2024-10-01 2025-01-01"},{"keyword":"/g/11dxd5m8sm","geo":"","time":"2024-10-01 2025-01-01"},{"keyword":"/g/11jrs8n__7","geo":"","time":"2024-10-01 2025-01-01"}],"category":0,"property":""}, {"exploreQuery":"date=2024-10-01%202025-01-01&q=%2Fg%2F11shcz8pcd,%2Fg%2F11dxd5m8sm,%2Fg%2F11jrs8n__7&hl=en","guestPath":"https://trends.google.com:443/trends/embed/"});
+                        </script>
+                    </div>
                 </div>
             </details>
             <br>
